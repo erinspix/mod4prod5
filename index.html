@@ -1,0 +1,46 @@
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+<script src="/js/script.js"></script>
+<div class="container">
+    <link rel="stylesheet" href="/css/styles.css"
+    >
+    <header>
+        <h1>Task Board</h1>
+        <button id="addTaskBtn">Add Task</button>
+    </header>
+    <div class="columns">
+        <div id="not-started" class="column">
+            <h2>Not Yet Started</h2>
+            <div id="not-started-tasks"></div>
+        </div>
+        <div id="in-progress" class="column">
+            <h2>In Progress</h2>
+            <div id="in-progress-tasks"></div>
+        </div>
+        <div id="completed" class="column">
+            <h2>Completed</h2>
+            <div id="completed-tasks"></div>
+        </div>
+    </div>
+</div>
+<div id="taskModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="taskForm">
+            <label for="title">Task Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+
+            <label for="deadline">Deadline:</label>
+            <input type="date" id="deadline" name="deadline" required>
+
+            <button type="submit">Save Task</button>
+        </form>
+    </div>
+</div>

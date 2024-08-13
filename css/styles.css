@@ -1,27 +1,39 @@
 body {
     font-family: Arial, sans-serif;
 }
+
 .container {
     width: 80%;
     margin: auto;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .columns {
     display: flex;
     justify-content: space-between;
 }
+
 .column {
     width: 30%;
     background-color: #f4f4f4;
     padding: 10px;
     border-radius: 5px;
 }
+
 .task-card {
     background-color: #fff;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: move; /* Change cursor to indicate draggable */
 }
+
 .modal {
     display: none;
     position: fixed;
@@ -31,10 +43,16 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 .modal-content {
     background-color: #fff;
     margin: 15% auto;
     padding: 20px;
     border-radius: 5px;
     width: 50%;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
 }
