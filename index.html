@@ -1,45 +1,70 @@
+<!-- Include jQuery library for DOM manipulation -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<!-- Include day.js library for date manipulation -->
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
+
+<!-- Include jQuery UI for additional UI components like draggable and droppable -->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- Include jQuery UI CSS for styling the UI components -->
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-
+<!-- Include the main JavaScript file that contains the app's functionality -->
 <script src="/js/script.js"></script>
+
+<!-- Main container for the Task Board UI -->
 <div class="container">
-    <link rel="stylesheet" href="/css/styles.css"
-    >
+
+    <!-- Include the main CSS file for styling the Task Board -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Header section with the title and a button to add new tasks -->
     <header>
         <h1>Task Board</h1>
         <button id="addTaskBtn">Add Task</button>
     </header>
+
+    <!-- Columns for organizing tasks by status -->
     <div class="columns">
+        <!-- Column for tasks that have not yet been started -->
         <div id="not-started" class="column">
             <h2>Not Yet Started</h2>
             <div id="not-started-tasks"></div>
         </div>
+        <!-- Column for tasks that are currently in progress -->
         <div id="in-progress" class="column">
             <h2>In Progress</h2>
             <div id="in-progress-tasks"></div>
         </div>
+        <!-- Column for tasks that have been completed -->
         <div id="completed" class="column">
             <h2>Completed</h2>
             <div id="completed-tasks"></div>
         </div>
     </div>
 </div>
+
+<!-- Modal for adding a new task -->
 <div id="taskModal" class="modal">
     <div class="modal-content">
+        <!-- Close button for the modal -->
         <span class="close">&times;</span>
+        <!-- Form for entering task details -->
         <form id="taskForm">
+            <!-- Input for task title -->
             <label for="title">Task Title:</label>
             <input type="text" id="title" name="title" required>
 
+            <!-- Textarea for task description -->
             <label for="description">Description:</label>
             <textarea id="description" name="description"></textarea>
 
+            <!-- Input for task deadline -->
             <label for="deadline">Deadline:</label>
             <input type="date" id="deadline" name="deadline" required>
 
+            <!-- Submit button to save the task -->
             <button type="submit">Save Task</button>
         </form>
     </div>
