@@ -14,6 +14,7 @@ Completed
 Drag and Drop: Move tasks between columns easily.
 Task Deletion: Remove tasks when they're no longer needed.
 Color Coding: Tasks are color-coded based on status and deadlines:
+White: still has time and not near deadline
 Red: Past deadline
 Yellow: Nearing deadline or in progress
 Green: Completed
